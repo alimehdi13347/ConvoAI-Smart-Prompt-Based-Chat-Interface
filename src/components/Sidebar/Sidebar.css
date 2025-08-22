@@ -1,0 +1,115 @@
+.sidebar {
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 25px 18px;
+    color: #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.sidebar img {
+   width: 20px;
+}
+
+.sidebar .menu {
+    display: block;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* New Chat Button */
+.sidebar .newchat {
+    margin-top: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+    color: white;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 12px 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.sidebar .newchat:hover {
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Recent Chats */
+.sidebar .recent {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1.5s;
+}
+
+.sidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.sidebar .recent-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 12px;
+    color: #cbd5e1;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.sidebar .recent-entry:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+/* Bottom Section */
+.sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.sidebar .bottom-items {
+    cursor: pointer;
+    color: #94a3b8;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.sidebar .bottom-items:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Mobile Slide-In */
+@media (max-width:600px) {
+    .sidebar {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 220px;
+        height: 100%;
+        animation: slideIn 0.3s ease;
+    }
+
+    @keyframes slideIn {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(0); }
+    }
+}
