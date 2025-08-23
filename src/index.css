@@ -21,11 +21,9 @@
   }
   
 }
-
 .sidebar img,
-.searchbox img,
-.result img {
-    filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(190deg) saturate(500%);
+.searchbox img {
+    filter: brightness(0) invert(1);
 }
 
 
